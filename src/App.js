@@ -6,8 +6,8 @@ import "./App.css";
 function App() {
   return (
     <div container>
-      <div row>
-        <div col>
+      <div className="row">
+        <div className="col">
           <div className="App">
             <h1 className="title"> WEATHER FORECAST</h1>
             <Submit />
