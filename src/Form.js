@@ -1,5 +1,5 @@
 import React from "react";
-import "./Submit.css";
+import "./Form.css";
 
 export default function Submit() {
   return (
