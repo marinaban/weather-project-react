@@ -10,7 +10,7 @@ function App() {
       className="container-fluid"
       style={{
         backgroundImage: `url("${BackgroundImg}")`,
-        width: "100vw",
+        width: "100%",
         height: "100vh",
       }}
     >

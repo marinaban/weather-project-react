@@ -1,0 +1,16 @@
+.form {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.form .search{
+display: flex;
+margin-right: 60px;
+}
+
+button {
+  display: inline-block;
+
+}
