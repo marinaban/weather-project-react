@@ -14,10 +14,49 @@ function App() {
         height: "100vh",
       }}
     >
-      <div className="row">
-        <div className="col">
-          <h1 className="title"> Magic weather forecast</h1>
-          <Form />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <header className="title"> Magic weather forecast</header>
+            <Form />
+          </div>
+          <div className="row">
+            <div className="col-6">
+              <h1>Split</h1>
+              <h2> "img" 17°C</h2>
+              <p>overcast clouds</p>
+            </div>
+            <div className="col-6">
+              <div className="row">
+                {" "}
+                <div className="col-4">
+                  <p>16° High</p>
+                </div>
+                <div className="col-4">
+                  <p>3.1mph Wind</p>
+                </div>
+                <div className="col-4">
+                  <p>20:18 Sunset</p>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-4">
+                  <p>6° Low</p>
+                </div>
+                <div className="col-4">
+                  <p>20% Humidity</p>
+                </div>
+                <div className="col-4">
+                  <p>07:00 Sunrise</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <h3>Forecast</h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
