@@ -14,60 +14,60 @@ function App() {
         height: "100vh",
       }}
     >
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <header className="title"> Magical weather forecast</header>
-            <Form />
+      <div className="row ">
+        <div className="col">
+          <header className="title"> Magical weather forecast</header>
+          <Form />
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-6 temperatureColumn">
+            <h1>Port-Au-Prince</h1>
+            <h2>
+              "img" <span className="temperatureNumber">17</span>°C
+            </h2>
+            <p>overcast clouds</p>
           </div>
-          <div className="row">
-            <div className="col-6">
-              <h1>Split</h1>
-              <h2> "img" 17°C</h2>
-              <p>overcast clouds</p>
-            </div>
 
-            <div className="col-6 detailColumn">
-              <div className="row">
-                <div className="col-4 singles ">
-                  <p>
-                    16° <div>High</div>
-                  </p>
-                </div>
-                <div className="col-4 singles">
-                  <p>
-                    3.1mph <div>Wind</div>
-                  </p>
-                </div>
-                <div className="col-4 singles">
-                  <p>
-                    20:18 <div>Sunset</div>
-                  </p>
-                </div>
+          <div className="col-6 dataColumn">
+            <div className="row g-0">
+              <div className="col-4 singles ">
+                <p>
+                  16° <div>High</div>
+                </p>
               </div>
-              <div className="row">
-                <div className="col-4 singles">
-                  <p>
-                    6° <div>Low</div>
-                  </p>
-                </div>
-                <div className="col-4 singles">
-                  <p className="humidity">
-                    20% <div>Humidity</div>
-                  </p>
-                </div>
-                <div className="col-4 singles">
-                  <p>
-                    07:00 <div>Sunrise</div>
-                  </p>
-                </div>
+              <div className="col-4 singles">
+                <p>
+                  3.1mph <div>Wind</div>
+                </p>
+              </div>
+              <div className="col-4 singles">
+                <p>
+                  20:18 <div>Sunset</div>
+                </p>
+              </div>
+            </div>
+            <div className="row g-0">
+              <div className="col-4 singles">
+                <p>
+                  6° <div>Low</div>
+                </p>
+              </div>
+              <div className="col-4 singles">
+                <p className="humidity">
+                  20% <div>Humidity</div>
+                </p>
+              </div>
+              <div className="col-4 singles">
+                <p>
+                  07:00 <div>Sunrise</div>
+                </p>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col">
-              <h3>Forecast</h3>
-            </div>
+        </div>
+        <div className="row">
+          <div className="col forecast">
+            <h3>Forecast</h3>
           </div>
         </div>
       </div>

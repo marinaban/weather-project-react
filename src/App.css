@@ -1,40 +1,55 @@
 *{
   padding: 0;
   margin: 0;
-  color: rgb(250, 235, 215);
-  font-family: 'Rubik',
-  sans-serif;
+  color: rgba(255, 255, 225, 0.923);
+  font-family: 'Rubik', sans-serif;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
-
-.container{
-  padding: 0;
-  margin: 0 auto;
+h1{
+  text-indent: 20px;
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: rgba(255, 255, 0, 0.821);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+.title{
+  text-transform: uppercase;
+  margin-top:5px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
-.row {
-  margin: 0;
-  padding: 0;
+.temperatureNumber{
+  font-size: 6rem;
+  margin-left: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
-
-.detailColumn{
+.dataColumn{
   padding: 20px 0px 0px 0px;
-  margin: 30px 0px 0px 0px;
-  background: rgba(255, 255, 255, 0.1);
+  margin: 50px 0px 0px 0px;
+  background: rgba(255, 123, 0, 0.170);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
-  
+  width: 40%;
 }
-
-.detailColumn .singles{
+.dataColumn:hover {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+.dataColumn .singles{
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
-
-.detailColumn .singles .humidity {
+.dataColumn .singles .humidity {
   position: relative;
   top: 0;
   left: 7px;
+}
+.forecast{
+  margin: 20px;
 }
