@@ -17,7 +17,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col">
-            <header className="title"> Magic weather forecast</header>
+            <header className="title"> Magical weather forecast</header>
             <Form />
           </div>
           <div className="row">
@@ -26,28 +26,40 @@ function App() {
               <h2> "img" 17°C</h2>
               <p>overcast clouds</p>
             </div>
-            <div className="col-6">
+
+            <div className="col-6 detailColumn">
               <div className="row">
-                {" "}
-                <div className="col-4">
-                  <p>16° High</p>
+                <div className="col-4 singles ">
+                  <p>
+                    16° <div>High</div>
+                  </p>
                 </div>
-                <div className="col-4">
-                  <p>3.1mph Wind</p>
+                <div className="col-4 singles">
+                  <p>
+                    3.1mph <div>Wind</div>
+                  </p>
                 </div>
-                <div className="col-4">
-                  <p>20:18 Sunset</p>
+                <div className="col-4 singles">
+                  <p>
+                    20:18 <div>Sunset</div>
+                  </p>
                 </div>
               </div>
               <div className="row">
-                <div className="col-4">
-                  <p>6° Low</p>
+                <div className="col-4 singles">
+                  <p>
+                    6° <div>Low</div>
+                  </p>
                 </div>
-                <div className="col-4">
-                  <p>20% Humidity</p>
+                <div className="col-4 singles">
+                  <p className="humidity">
+                    20% <div>Humidity</div>
+                  </p>
                 </div>
-                <div className="col-4">
-                  <p>07:00 Sunrise</p>
+                <div className="col-4 singles">
+                  <p>
+                    07:00 <div>Sunrise</div>
+                  </p>
                 </div>
               </div>
             </div>
