@@ -1,4 +1,5 @@
 import React from "react";
+import { createBootstrapComponent } from "react-bootstrap/esm/ThemeProvider";
 import "./Form.css";
 
 export default function Submit() {
@@ -7,12 +8,19 @@ export default function Submit() {
       <div className="input-group rounded w-50">
         <input
           type="search"
-          className="form-control rounded  search"
-          style={{ backgroundColor: "rgb(191, 179, 76, 0.6)" }}
+          className="form-control rounded search"
           placeholder="Enter a city..."
+          style={{
+            backgroundColor: "rgb(191, 179, 76, 0)",
+            color: "whitesmoke",
+          }}
         />
 
-        <button type="submit" className="btn btn-outline-secondary rounded">
+        <button
+          type="submit"
+          className="btn btn-outline-light rounded"
+          style={{ border: "none", backgroundColor: "none" }}
+        >
           Search
         </button>
       </div>
