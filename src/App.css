@@ -16,6 +16,23 @@ h1{
   h2 {
     margin-bottom: 0;
   }
+  .form {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form .search {
+    display: flex;
+    margin-left: 30px;
+  }
+  
+  button {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 16px;
+  }
 .title{
   text-transform: uppercase;
   margin-top:5px;
@@ -31,13 +48,13 @@ h1{
   margin: 50px 0px 0px 0px;
   background: rgba(255, 123, 0, 0.170);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 4px 11px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   width: 40%;
 }
 .dataColumn:hover {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), inset 0 4px 11px rgba(0, 0, 0, 0.25);
 }
 .dataColumn .singles{
   padding: 0;
@@ -45,11 +62,9 @@ h1{
   justify-content: center;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
-.dataColumn .singles .humidity {
-  position: relative;
-  top: 0;
-  left: 7px;
-}
+
 .forecast{
   margin: 20px;
 }
+
+
