@@ -3,13 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import BackgroundImg from "./img/anime.jpg";
 import Spinner from "./Spinner";
-import FormattedSunriseTime from "./FormattedSunriseTime";
-import FormattedSunsetTime from "./FormattedSunsetTime";
-import FormatDate from "./FormatDate";
+import WeatherInfo from "./WeatherInfo";
 import "./App.css";
 
 function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState("Port-au-Prince");
 
   function handleResponse(response) {
     console.log(response.data);
@@ -24,13 +23,22 @@ function App() {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
+      city: response.data.name,
     });
   }
 
-  function searchApi() {
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
     const apiKey = "a8c21df111443a41d8a63f0cde70ef6b";
     let units = "metric";
-    let city = "Port-Au-Prince";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -48,10 +56,10 @@ function App() {
         <div className="row">
           <div className="col">
             <header className="title"> Anime weather forecast</header>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
               <div className="input-group rounded w-50">
                 <input
-                  type="text"
+                  type="search"
                   className="form-control rounded search"
                   placeholder="Enter a city..."
                   style={{
@@ -61,83 +69,22 @@ function App() {
                     boxShadow:
                       "1px 1px 20px rgba(0,0,0,0.6), inset 2px 2px 7px rgba(0,0,0,0.5)",
                   }}
-                  autoFocus="on"
+                  onChange={handleCityChange}
                 />
-                <button
+                <input
                   type="submit"
-                  className="btn btn-link"
+                  className="btn btn-link button"
+                  value="Search"
                   style={{
                     textDecoration: "none",
                     color: "rgba(255, 255, 0, 0.723)",
                     textShadow: "3px 3px rgba(0,0,0,0.3)",
                   }}
-                >
-                  Search
-                </button>
+                />
               </div>
             </form>
           </div>
-          <div className="row justify-content-center">
-            <div className="col-6 temperatureColumn">
-              <h1>
-                Port-Au-Prince{" "}
-                <div className="date">
-                  <FormatDate date={weatherData.date} />
-                </div>
-              </h1>
-              <h2>
-                <img
-                  src={weatherData.icon}
-                  alt={weatherData.description}
-                  className="float-left"
-                ></img>{" "}
-                <span className="temperatureNumber">
-                  {weatherData.temperature}
-                </span>
-                °C
-              </h2>
-              <p className="text-capitalize">{weatherData.description}</p>
-            </div>
-
-            <div className="col-6 dataColumn">
-              <div className="row gy-3">
-                <div className="col-4 singles ">
-                  <div>
-                    {weatherData.high}°C <div>High</div>
-                  </div>
-                </div>
-                <div className="col-4 singles">
-                  <div>
-                    {weatherData.wind}km/h <div>Wind</div>
-                  </div>
-                </div>
-                <div className="col-4 singles">
-                  <div>
-                    <FormattedSunsetTime sunset={weatherData.sunset} />
-                    <div>Sunset</div>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-4 singles">
-                  <div>
-                    {weatherData.low}°C <div>Low</div>
-                  </div>
-                </div>
-                <div className="col-4 singles">
-                  <div className="humidity">
-                    {weatherData.humidity}% <div>Humidity</div>
-                  </div>
-                </div>
-                <div className="col-4 singles">
-                  <div>
-                    <FormattedSunriseTime sunrise={weatherData.sunrise} />
-                    <div>Sunrise</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <WeatherInfo info={weatherData} />
           <div className="row">
             <div className="col forecast">
               <h3>Forecast</h3>
@@ -147,7 +94,7 @@ function App() {
       </div>
     );
   } else {
-    searchApi();
+    search();
 
     return <Spinner />;
   }

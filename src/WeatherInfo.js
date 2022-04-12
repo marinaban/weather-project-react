@@ -1,0 +1,70 @@
+import React from "react";
+import FormattedSunriseTime from "./FormattedSunriseTime";
+import FormattedSunsetTime from "./FormattedSunsetTime";
+import FormatDate from "./FormatDate";
+
+import "./WeatherInfo.css";
+
+export default function WeatherInfo(props) {
+  return (
+    <div className="row justify-content-center">
+      <div className="col-6 temperatureColumn">
+        <h1>
+          {props.info.city}{" "}
+          <div className="date">
+            <FormatDate date={props.info.date} />
+          </div>
+        </h1>
+        <h2>
+          <img
+            src={props.info.icon}
+            alt={props.info.description}
+            className="float-left"
+          ></img>{" "}
+          <span className="temperatureNumber">{props.info.temperature}</span>
+          °C
+        </h2>
+        <p className="text-capitalize">{props.info.description}</p>
+      </div>
+
+      <div className="col-6 dataColumn">
+        <div className="row gy-3">
+          <div className="col-4 singles ">
+            <div>
+              {props.info.high}°C <div>High</div>
+            </div>
+          </div>
+          <div className="col-4 singles">
+            <div>
+              {props.info.wind}km/h <div>Wind</div>
+            </div>
+          </div>
+          <div className="col-4 singles">
+            <div>
+              <FormattedSunsetTime sunset={props.info.sunset} />
+              <div>Sunset</div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4 singles">
+            <div>
+              {props.info.low}°C <div>Low</div>
+            </div>
+          </div>
+          <div className="col-4 singles">
+            <div className="humidity">
+              {props.info.humidity}% <div>Humidity</div>
+            </div>
+          </div>
+          <div className="col-4 singles">
+            <div>
+              <FormattedSunriseTime sunrise={props.info.sunrise} />
+              <div>Sunrise</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

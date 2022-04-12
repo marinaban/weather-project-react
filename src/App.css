@@ -5,69 +5,36 @@
   font-family: 'Rubik', sans-serif;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
-h1{
-  text-indent: 20px;
-  margin-bottom: 20px;
-  font-size: 35px;
-  color: rgba(255, 255, 0, 0.821);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  
-  }
-  h1 .date {
-    font-size: 16px;
-  }
-  h2 {
-    margin-bottom: 0;
-  }
-  button {
+.title {
+text-transform: uppercase;
+margin-top:5px;
+text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+h1 {
+text-indent: 20px;
+margin-bottom: 20px;
+font-size: 35px;
+color: rgba(255, 255, 0, 0.821);
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+.button {
     display: inline-block;
     position: relative;
     top: 0;
     left: 16px;
   }
-  .form {
+.form {
     margin: 50px;
     display: flex;
     justify-content: center;
   }
-  
   .form .search {
     display: flex;
     margin-left: 30px;
   }
+  .forecast{
+    margin: 20px;
+  }
   
-.title{
-  text-transform: uppercase;
-  margin-top:5px;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
-}
-.temperatureNumber{
-  font-size: 6rem;
-  margin-left: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-.dataColumn{
-  padding: 20px 0px 0px 0px;
-  margin: 50px 0px 0px 0px;
-  background: rgba(255, 123, 0, 0.170);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 4px 11px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(1.5px);
-  width: 40%;
-}
-.dataColumn:hover {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), inset 0 4px 11px rgba(0, 0, 0, 0.25);
-}
-.dataColumn .singles{
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
-}
-
-.forecast{
-  margin: 20px;
-}
-
 
