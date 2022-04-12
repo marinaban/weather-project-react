@@ -17,10 +17,11 @@ export default function WeatherInfo(props) {
         </h1>
         <h2>
           <img
+            className="img"
             src={props.info.icon}
             alt={props.info.description}
-            className="float-left"
-          ></img>{" "}
+            width={120}
+          />
           <span className="temperatureNumber">{props.info.temperature}</span>
           °C
         </h2>
