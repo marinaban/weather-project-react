@@ -3,12 +3,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import BackgroundImg from "./img/anime.jpg";
 import Spinner from "./Spinner";
+import FormattedSunriseTime from "./FormattedSunriseTime";
+import FormattedSunsetTime from "./FormattedSunsetTime";
+import FormatDate from "./FormatDate";
 import "./App.css";
 
 function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: Math.round(response.data.main.temp),
@@ -19,6 +23,7 @@ function App() {
       sunset: new Date(response.data.sys.sunset * 1000),
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -74,7 +79,12 @@ function App() {
           </div>
           <div className="row justify-content-center">
             <div className="col-6 temperatureColumn">
-              <h1>Port-Au-Prince</h1>
+              <h1>
+                Port-Au-Prince{" "}
+                <div className="date">
+                  <FormatDate date={weatherData.date} />
+                </div>
+              </h1>
               <h2>
                 <img
                   src={weatherData.icon}
@@ -103,7 +113,7 @@ function App() {
                 </div>
                 <div className="col-4 singles">
                   <div>
-                    20:00
+                    <FormattedSunsetTime sunset={weatherData.sunset} />
                     <div>Sunset</div>
                   </div>
                 </div>
@@ -121,7 +131,7 @@ function App() {
                 </div>
                 <div className="col-4 singles">
                   <div>
-                    07:00
+                    <FormattedSunriseTime sunrise={weatherData.sunrise} />
                     <div>Sunrise</div>
                   </div>
                 </div>
