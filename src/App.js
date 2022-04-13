@@ -11,7 +11,6 @@ function App() {
   const [city, setCity] = useState("Port-au-Prince");
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: Math.round(response.data.main.temp),

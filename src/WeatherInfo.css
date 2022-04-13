@@ -17,7 +17,7 @@ h2 {
   top: 25px;
 }
 
-.img{
+h2 .img{
   position: relative;
   bottom: 20px;
   right: 15px;
@@ -25,14 +25,18 @@ h2 {
   padding: 0;
 }
 
-.temperatureNumber {
+h2 .temperatureNumber {
   font-size: 6rem;
   margin-left: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
+.description{
+  position: relative;
+  bottom: 15px;
+}
 
 .dataColumn {
-  padding: 20px 0px 0px;
+  padding: 20px 0px;
   margin: 50px 0px 0px;
   background: rgba(255, 123, 0, 0.170);
   border-radius: 16px;
@@ -41,7 +45,6 @@ h2 {
   -webkit-backdrop-filter: blur(1.5px);
   width: 35%;
   height: 70%;
-  
 }
 
 .dataColumn:hover {

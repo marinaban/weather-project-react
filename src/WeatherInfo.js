@@ -8,8 +8,8 @@ import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="row justify-content-center">
-      <div className="col-6 temperatureColumn">
+    <div className="row justify-content-center h-50">
+      <div className="col-6 temperatureColumn p-0">
         <h1>
           {props.info.city}{" "}
           <div className="date">
@@ -25,7 +25,7 @@ export default function WeatherInfo(props) {
           />
           <WeatherTemperature celsius={props.info.temperature} />
         </h2>
-        <p className="text-capitalize">{props.info.description}</p>
+        <p className="text-capitalize description">{props.info.description}</p>
       </div>
 
       <div className="col-6 dataColumn">
