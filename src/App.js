@@ -89,7 +89,29 @@ function App() {
             <div className="col forecast">
               <h3>Forecast</h3>
             </div>
-          </div>
+
+            <footer>
+              <div className="rotate">
+                Coded by Marina Banić:
+                <a
+                  href="https://github.com/marinaban/weather-project-react"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  GitHub
+                </a>{" "}
+                /{" "}
+                <a
+                  href="https://tubular-gumption-719cfd.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Netlify
+                </a>
+              </div>
+            </footer>
+          </div>{" "}
         </div>
       </div>
     );

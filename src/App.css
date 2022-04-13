@@ -9,6 +9,20 @@
 text-transform: uppercase;
 margin-top:5px;
 }
+footer .rotate{
+  text-shadow: none;
+  font-size: 13px; 
+  margin-top: 102px;
+  direction: rtl; 
+  transform-origin: bottom right;
+  transform: translatey(30px);
+}
+footer a{
+  color: rgba(255, 255, 0, 0.821);
+}
+footer a:hover {
+ color: rgb(255, 99, 71); 
+}
 
 .button {
     display: inline-block;
@@ -25,9 +39,9 @@ margin-top:5px;
     display: flex;
     margin-left: 30px;
   }
+
   .forecast{
     margin-left: 30px;
-    
   }
   
 
