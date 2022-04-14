@@ -11,14 +11,17 @@ margin-top:5px;
 }
 footer .rotate{
   text-shadow: none;
+  color: #4E353B;
   font-size: 13px; 
-  margin-top: 102px;
   direction: rtl; 
   transform-origin: bottom right;
   transform: translatey(30px);
+  position: relative;
+  bottom: 30px;
 }
 footer a{
-  color: rgba(255, 255, 0, 0.821);
+  color: #13285E;
+  text-shadow: none;
 }
 footer a:hover {
  color: rgb(255, 99, 71); 
@@ -40,8 +43,6 @@ footer a:hover {
     margin-left: 30px;
   }
 
-  .forecast{
-    margin-left: 30px;
-  }
+ 
   
 

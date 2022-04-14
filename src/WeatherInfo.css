@@ -37,11 +37,12 @@ h2 .temperatureNumber {
 
 .dataColumn {
   padding: 20px 0px;
-  margin: 50px 0px 0px;
-  background: rgba(255, 123, 0, 0.170);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 4px 11px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(1.5px);
+  margin: 35px 0px 0px;
+  background:rgba(250, 205, 122, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4),
+  inset 0 4px 11px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   width: 35%;
   height: 70%;

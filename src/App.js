@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import BackgroundImg from "./img/anime.jpg";
+import BackgroundImg from "./img/gong.jpg";
 import Spinner from "./Spinner";
 import WeatherInfo from "./WeatherInfo";
 import "./App.css";
+import Forecast from "./Forecast";
 
 function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -55,7 +56,7 @@ function App() {
       >
         <div className="row">
           <div className="col">
-            <header className="title"> Anime weather forecast</header>
+            <header className="title"> Hover weather forecast</header>
             <form className="form" onSubmit={handleSubmit}>
               <div className="input-group rounded w-50">
                 <input
@@ -64,10 +65,11 @@ function App() {
                   placeholder="Enter a city..."
                   style={{
                     backgroundColor: "rgba(114, 113, 109, 0.308)",
-                    color: "rgba(255, 255, 225, 0.823)",
+                    color: "rgba(255, 255, 225, 1)",
+                    textShadow: "none",
                     border: "1px solid rgba(0, 0, 0, 0.2)",
                     boxShadow:
-                      "1px 1px 20px rgba(0,0,0,0.6), inset 2px 2px 7px rgba(0,0,0,0.5)",
+                      "0px 0px 5px rgba(0,0,0,0.2), inset 3px 3px 7px rgba(0,0,0,0.5)",
                   }}
                   onChange={handleCityChange}
                 />
@@ -78,40 +80,35 @@ function App() {
                   style={{
                     textDecoration: "none",
                     color: "rgba(255, 255, 0, 0.723)",
-                    textShadow: "3px 3px rgba(0,0,0,0.3)",
+                    textShadow: "2px 4px 3px rgba(0,0,0,0.3)",
                   }}
                 />
               </div>
             </form>
           </div>
           <WeatherInfo info={weatherData} />
-          <div className="row">
-            <div className="col forecast">
-              <h3>Forecast</h3>
+          <Forecast />
+          <footer>
+            <div className="rotate">
+              Coded by Marina Banić:
+              <a
+                href="https://github.com/marinaban/weather-project-react"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                GitHub
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://tubular-gumption-719cfd.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Netlify
+              </a>
             </div>
-
-            <footer>
-              <div className="rotate">
-                Coded by Marina Banić:
-                <a
-                  href="https://github.com/marinaban/weather-project-react"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  GitHub
-                </a>{" "}
-                /{" "}
-                <a
-                  href="https://tubular-gumption-719cfd.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Netlify
-                </a>
-              </div>
-            </footer>
-          </div>{" "}
+          </footer>
         </div>
       </div>
     );
