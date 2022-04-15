@@ -83,7 +83,7 @@ transform: rotateY(25deg);
   transform: translateY(7px);
 }
 
-.container p {
+.image, .temperature{
   transition: 0.5s;
   transform: translateY(150px);
 }

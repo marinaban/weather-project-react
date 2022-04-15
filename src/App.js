@@ -14,6 +14,7 @@ function App() {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       high: Math.round(response.data.main.temp_max),
       low: Math.round(response.data.main.temp_min),
@@ -56,7 +57,7 @@ function App() {
       >
         <div className="row">
           <div className="col">
-            <header className="title"> Hover weather forecast</header>
+            <header className="title"> Hover me weather forecast</header>
             <form className="form" onSubmit={handleSubmit}>
               <div className="input-group rounded w-50">
                 <input
@@ -87,7 +88,7 @@ function App() {
             </form>
           </div>
           <WeatherInfo info={weatherData} />
-          <Forecast />
+          <Forecast coordinates={weatherData.coordinates} />
           <footer>
             <div className="rotate">
               Coded by Marina Banić:
