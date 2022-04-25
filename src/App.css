@@ -11,7 +11,7 @@ margin-top:5px;
 }
 footer .rotate{
   text-shadow: none;
-  color: #4E353B;
+  color: #3fddd5;
   font-size: 13px; 
   direction: rtl; 
   transform-origin: bottom right;
@@ -20,7 +20,7 @@ footer .rotate{
   bottom: 30px;
 }
 footer a{
-  color: #13285E;
+  color: #102353;
   text-shadow: none;
 }
 footer a:hover {

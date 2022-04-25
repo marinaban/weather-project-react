@@ -6,7 +6,7 @@ export default function WeatherIcon(props) {
       className="image"
       src={props.code.icon}
       alt={props.code.description}
-      width={20}
+      width="20"
     />
   );
 }

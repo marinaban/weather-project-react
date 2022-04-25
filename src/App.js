@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import BackgroundImg from "./img/gong.jpg";
+import BackgroundImg from "./img/BeFunky4.jpg";
 import Spinner from "./Spinner";
 import WeatherInfo from "./WeatherInfo";
 import "./App.css";
@@ -51,8 +51,10 @@ function App() {
         className="container-fluid"
         style={{
           backgroundImage: `url("${BackgroundImg}")`,
-          width: "100%",
-          height: "100vh",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="row">

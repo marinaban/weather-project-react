@@ -16,9 +16,9 @@ h5, p{
 }
 
 .forecast{
-  width: 1000px;
-  margin: 0 auto;
-  padding-right: 100px;
+  width: 1100px;
+  margin: 0 auto 10px;
+  padding-right: 50px;
 }
 .container{
   position: relative;
@@ -33,7 +33,7 @@ h5, p{
 
 .container .box {
 position: relative;
-width: 120px;
+width: 123px;
 height: 160px;
 background: rgba(94, 87, 67, 0.137);
 box-shadow:  0px 38px 10px rgba(26, 1, 23, 0.568),

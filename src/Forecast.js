@@ -8,8 +8,17 @@ export default function Forecast(props) {
   let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
-    setLoaded(true);
     setForecast(response.data.daily);
+    setLoaded(true);
+  }
+
+  function callApi() {
+    const apiKey = "a8c21df111443a41d8a63f0cde70ef6b";
+    let units = "metric";
+    let latitude = props.coordinates.lat;
+    let longitude = props.coordinates.lon;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   useEffect(() => {
@@ -20,25 +29,22 @@ export default function Forecast(props) {
     return (
       <div className="forecast">
         <div className="container">
-          {forecast.map(function (dailyForecast, index) {
-            if (index < 6) {
-              return (
-                <div className="col" key={index}>
-                  <WeatherForecastDay day={dailyForecast} />
-                </div>
-              );
-            }
-          })}
+          <div className="row row-cols-auto">
+            {forecast.map((dailyForecast, index) => {
+              if (index < 6) {
+                return (
+                  <div className="col" key={index}>
+                    <WeatherForecastDay day={dailyForecast} />
+                  </div>
+                );
+              }
+            })}
+          </div>
         </div>
       </div>
     );
   } else {
-    const apiKey = "a8c21df111443a41d8a63f0cde70ef6b";
-    let units = "metric";
-    let latitude = props.coordinates.lat;
-    let longitude = props.coordinates.lon;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(handleResponse);
+    callApi();
 
     return "<Spinner />";
   }
