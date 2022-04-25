@@ -30,7 +30,7 @@ export default function Forecast(props) {
       <div className="forecast">
         <div className="container">
           <div className="row row-cols-auto">
-            {forecast.map((dailyForecast, index) => {
+            {forecast.map(function (dailyForecast, index) {
               if (index < 6) {
                 return (
                   <div className="col" key={index}>
@@ -38,6 +38,7 @@ export default function Forecast(props) {
                   </div>
                 );
               }
+              return null;
             })}
           </div>
         </div>

@@ -25,7 +25,10 @@ export default function WeatherForecastDay(props) {
       <div className="box">
         <h5>{forecastDays()}</h5>
         <div className="content">
-          <WeatherIcon code={props.day.weather[0]} />
+          <WeatherIcon
+            src={`http://openweathermap.org/img/wn/${props.day.weather[0].icon}@2x.png`}
+            alt={props.day.weather[0].description}
+          />
           <p className="temperature">{temperatureDay()}°C</p>
         </div>
       </div>

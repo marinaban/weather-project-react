@@ -4,9 +4,10 @@ export default function WeatherIcon(props) {
   return (
     <img
       className="image"
-      src={props.code.icon}
-      alt={props.code.description}
-      width="20"
+      src={props.src}
+      alt={props.alt}
+      width={90}
+      height={90}
     />
   );
 }
