@@ -25,11 +25,18 @@ export default function WeatherForecastDay(props) {
       <div className="box">
         <h5>{forecastDays()}</h5>
         <div className="content">
-          <WeatherIcon
-            src={`http://openweathermap.org/img/wn/${props.day.weather[0].icon}@2x.png`}
-            alt={props.day.weather[0].description}
-          />
-          <p className="temperature">{temperatureDay()}°C</p>
+          <ul>
+            <li>
+              <WeatherIcon
+                src={`http://openweathermap.org/img/wn/${props.day.weather[0].icon}@2x.png`}
+                alt={props.day.weather[0].description}
+              />
+            </li>
+            <li>
+              {" "}
+              <p className="temperature">{temperatureDay()}°C</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
