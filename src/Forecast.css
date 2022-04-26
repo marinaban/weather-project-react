@@ -6,9 +6,12 @@
 h5, p{
   color: rgb(255, 255, 255);
 }
+
 li{
   list-style: none;
+
 }
+
 .content, .box::before{
   position: absolute;
   top: 0;
@@ -99,7 +102,7 @@ transform: rotateY(25deg);
 }
 .temperature{
   position: relative;
-  left: 5px;
+  left: 3px;
   top: 0;
 }
 
@@ -111,7 +114,7 @@ transform: rotateY(25deg);
 
 .box:hover .temperature {
   font-size: 20px;
-  transform: translateY(19px);
+  transform: translateY(23px);
   transition: 0.5s;
   transition-delay: 0.5s;
 }
