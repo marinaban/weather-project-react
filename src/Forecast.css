@@ -94,29 +94,26 @@ transform: rotateY(25deg);
 }
 .image {
   position: relative;
-  left: -15px;
+  left: -17px;
   top: 0;
 }
 .temperature{
   position: relative;
-  left: 7px;
+  left: 5px;
   top: 0;
 }
 
 .box:hover .image{
-  transform: translateY(17px);
+  transform: translateY(23px);
   transition: 0.5s;
   transition-delay: 0.4s;
 }
 
 .box:hover .temperature {
   font-size: 20px;
-  transform: translateY(7px);
+  transform: translateY(19px);
   transition: 0.5s;
   transition-delay: 0.5s;
-  position: relative;
-  left: 10px;
-  top: 0;
 }
 
 

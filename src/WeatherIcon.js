@@ -6,8 +6,8 @@ export default function WeatherIcon(props) {
       className="image"
       src={props.src}
       alt={props.alt}
-      width={90}
-      height={90}
+      width={80}
+      height={80}
     />
   );
 }
